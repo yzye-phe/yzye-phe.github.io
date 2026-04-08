@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yangzhen (Michael) Ye &mdash; Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0a1e3d; --navy-mid: #143056; --navy-light: #1d4272;
+  --slate: #3a5a7c; --sky: #6a9cc7; --ice: #d0e4f5;
+  --cream: #f7f9fc; --white: #ffffff; --gold: #c9a227;
+  --text: #1a1a2e; --text-mid: #4a4a5a; --text-light: #6e7185;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* HERO */
+.hero { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%); color: var(--white); padding: 5rem 2rem 4rem; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(106,156,199,0.12) 0%, transparent 70%); border-radius: 50%; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 { font-family: var(--font-display); font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.4em; }
+.hero h1 span { color: var(--sky); font-weight: 400; font-style: italic; }
+.hero-subtitle { font-size: 1.15rem; font-weight: 300; color: var(--ice); max-width: 600px; line-height: 1.7; margin-bottom: 1.5rem; }
+.hero-contact { display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+.hero-contact a { color: var(--sky); text-decoration: none; transition: color 0.2s; }
+.hero-contact a:hover { color: var(--gold); }
+
+/* NAV */
+.nav { background: var(--white); border-bottom: 1px solid var(--ice); position: sticky; top: 0; z-index: 100; padding: 0 2rem; }
+.nav-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 2rem; overflow-x: auto; }
+.nav a { display: block; padding: 1rem 0; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.nav a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+
+/* MAIN */
+.main { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 3.5rem 0 3rem; border-bottom: 1px solid #e2e8f0; }
+.section:last-child { border-bottom: none; }
+.section-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--slate); margin-bottom: 0.5rem; }
+.section h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+.section-intro { color: var(--text-mid); font-size: 1rem; max-width: 620px; margin-bottom: 2rem; }
+
+/* PROJECT CARD */
+.project { background: var(--white); border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.8rem 2rem; margin-bottom: 1.2rem; transition: box-shadow 0.25s, border-color 0.25s; }
+.project:hover { box-shadow: 0 4px 20px rgba(10,30,61,0.07); border-color: var(--sky); }
+.project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; }
+.project h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--navy-mid); }
+.project h3 a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.project h3 a:hover { border-bottom-color: var(--gold); }
+.project-tag { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25em 0.7em; border-radius: 3px; white-space: nowrap; flex-shrink: 0; }
+.tag-print { background: var(--ice); color: var(--navy-mid); }
+.tag-digital { background: #e8f5e9; color: #2e6b33; }
+.tag-both { background: #fff3e0; color: #8a5a00; }
+.project-context { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.7rem; font-style: italic; }
+.project p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* THUMBNAIL (overview on index) */
+.project-thumb { width: 100%; aspect-ratio: 16/9; border-radius: 4px; margin-bottom: 1rem; overflow: hidden; cursor: pointer; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.project-thumb:hover img { transform: scale(1.03); }
+.project-thumb.ratio-3-2 { aspect-ratio: 3/2; }
+.project-thumb img.contain { object-fit: contain; background: #f0f4f8; }
+.project-thumb img.dark-bg { background: #0a1e3d; }
+
+/* EXPANDABLE DETAILS */
+.project-details { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.project.expanded .project-details { max-height: 600px; }
+.expand-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; color: var(--slate); background: none; border: none; cursor: pointer; padding: 0.5rem 0; transition: color 0.2s; }
+.expand-btn:hover { color: var(--navy); }
+.expand-btn .arrow { display: inline-block; transition: transform 0.3s; font-size: 0.7rem; }
+.project.expanded .expand-btn .arrow { transform: rotate(180deg); }
+
+/* PROJECT APPROACH */
+.project-approach { background: var(--cream); border-left: 3px solid var(--gold); padding: 0.8rem 1rem; margin-top: 1rem; border-radius: 0 4px 4px 0; }
+.project-approach strong { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); display: block; margin-bottom: 0.3rem; }
+.project-approach span { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+
+/* VIEW PROJECT LINK */
+.project-link { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; font-weight: 600; color: var(--navy-mid); text-decoration: none; border-bottom: 1px solid var(--sky); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.project-link:hover { color: var(--gold); border-color: var(--gold); }
+
+/* IMAGE GALLERY (detail pages) */
+.project-gallery { display: grid; gap: 8px; margin-bottom: 1rem; border-radius: 4px; overflow: hidden; }
+.project-gallery.grid-2 { grid-template-columns: 1fr 1fr; }
+.project-gallery.grid-2 img { aspect-ratio: 4/3; }
+.project-gallery.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.project-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; border: 1px solid #e2e8f0; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.project-gallery img:hover { transform: scale(1.02); box-shadow: 0 2px 12px rgba(10,30,61,0.12); }
+
+/* FULL IMAGE (detail pages) */
+.project-full-image { width: 100%; border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; }
+.project-full-image img { width: 100%; object-fit: contain; }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.about-item h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate); margin-bottom: 0.4rem; }
+.about-item p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.6; }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(10,30,61,0.92); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; padding: 2rem; }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,0.4); }
+
+/* FOOTER */
+.footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem; font-size: 0.82rem; margin-top: 2rem; }
+.footer a { color: var(--sky); text-decoration: none; }
+
+/* BACK LINK (detail pages) */
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--slate); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--navy); }
+
+/* DETAIL PAGE BODY */
+.detail-body h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--navy-mid); margin: 1.5rem 0 0.5rem; }
+.detail-body ul { margin-left: 1.2em; margin-bottom: 1rem; }
+.detail-body li { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.4rem; }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .main { padding: 0 1.5rem; }
+  .project { padding: 1.4rem 1.2rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .nav-inner { gap: 1.2rem; }
+  .project-gallery.grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-inner > * { animation: fadeUp 0.6s ease-out both; }
+.hero h1 { animation-delay: 0.1s; }
+.hero-subtitle { animation-delay: 0.2s; }
+.hero-contact { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Yangzhen <span>(Michael)</span> Ye</h1>
+    <p class="hero-subtitle">
+      Higher education professional with experience in student advising, equity-centered assessment, and program coordination. M.A. in Higher Education, University of Michigan.
+    </p>
+    <div class="hero-contact">
+      <span>&#x1F4CD; Ann Arbor, MI</span>
+      <a href="mailto:yeyz&#64;umich.edu">yeyz&#64;umich.edu</a>
+      <span>Bilingual: English &middot; Mandarin Chinese</span>
+    </div>
+  </div>
+</header>
+
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#reports">Reports</a>
+    <a href="#presentations">Presentations</a>
+    <a href="#outreach">Outreach Materials</a>
+    <a href="#digital">Digital Content</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<main class="main">
+
+  <section class="section" id="reports">
+    <div class="section-label">Print Sample</div>
+    <h2>Institutional Reports</h2>
+    <p class="section-intro">Equity-focused research and assessment reports produced for institutional leadership and external stakeholders.</p>
+    
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/igr.html">IGR Common Assessment of Learning Report, 2024&ndash;25</a></h3>
+        <span class="project-tag tag-print">Print</span>
+      </div>
+      <div class="project-context">Intergroup Relations, University of Michigan &middot; Assessment Researcher</div>
+      <div class="project-thumb" onclick="location.href='projects/igr.html'"><img src="igr-cover.png" alt="IGR Report"></div>
+      <p>Designed and executed a comprehensive equity-focused evaluation of the 2024&ndash;25 Common Assessment of Learning program. Recognized by senior staff as &ldquo;one of the best reports in years.&rdquo;</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/igr.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>The report examined student outcomes across identity subgroups with attention to access, bias interruption, and institutional support. Recommendations were formally adopted into IGR&rsquo;s annual reporting cycle.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Structured the report to lead with student voice and disaggregated data, making equity gaps visible before presenting recommendations. Used accessible visual summaries to ensure non-specialist audiences could engage with the findings without losing nuance.</span>
+          </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" id="presentations">
+    <div class="section-label">Digital Sample</div>
+    <h2>Presentations &amp; Posters</h2>
+    <p class="section-intro">Conference presentations and visual materials designed for academic and professional audiences.</p>
+    
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/aefp.html">AEFP 2026 Conference Poster</a></h3>
+        <span class="project-tag tag-both">Print + Digital</span>
+      </div>
+      <div class="project-context">Association for Education Finance and Policy &middot; Annual Meeting 2026</div>
+      <div class="project-thumb ratio-3-2" onclick="location.href='projects/aefp.html'"><img src="poster.png" alt="AEFP poster" class="contain"></div>
+      <p>Designed and presented a research poster on student&ndash;faculty interaction patterns and GPA outcomes using the ELS:2002 dataset. First and sole author; independent project.</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/aefp.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>The poster communicated complex regression findings to a mixed audience of researchers, policymakers, and practitioners at the AEFP annual meeting.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Prioritized visual clarity with a limited color palette. Structured the layout so the equity narrative was readable in a 60-second scan while supporting deeper engagement.</span>
+          </div>
+        
+      </div>
+    </div>
+
+
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/jmm.html">JMM 2026 Invited Talk: Stakeholder Engagement in Interactive Textbook Design</a></h3>
+        <span class="project-tag tag-digital">Digital</span>
+      </div>
+      <div class="project-context">SIGMAA on RUME Special Session, Joint Mathematics Meetings 2026 &middot; Co-author (PI: Dr. Vilma Mesa)</div>
+      <div class="project-thumb" onclick="location.href='projects/jmm.html'"><img src="jmm.png" alt="JMM title slide" class="contain dark-bg"></div>
+      <p>Co-authored an invited talk on involving stakeholders in developing interactive questions for PROTEUS textbooks. Contributed to stakeholder engagement design and data collection.</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/jmm.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>Presented by Dr. Vilma Mesa at the SIGMAA on RUME Special Session. The talk examined how students, instructors, and developers collaborate in creating effective interactive textbook content.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Designed the stakeholder engagement process to center student perspectives alongside faculty input, ensuring interactive questions reflected how students actually encounter mathematical concepts.</span>
+          </div>
+        
+      </div>
+    </div>
+
+
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/rume.html">RUME 2026: Student Agency in Collaborative Textbook Development</a></h3>
+        <span class="project-tag tag-digital">Digital</span>
+      </div>
+      <div class="project-context">28th Conference on Research in Undergraduate Mathematics Education &middot; Co-author (PI: Dr. Vilma Mesa)</div>
+      <div class="project-thumb" onclick="location.href='projects/rume.html'"><img src="rume.png" alt="RUME title slide" class="contain dark-bg"></div>
+      <p>Co-authored a peer-reviewed paper on student agency in developing novel interactive textbook questions in calculus and linear algebra. Contributed to transcript analysis and interpretation.</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/rume.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>Presented by Dr. Johannah Crandall at the 28th RUME Conference. The paper examined how students exercise agency when collaborating with researchers and instructors to create new learning materials.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Applied qualitative coding focused on moments where students exercised or were denied agency, surfacing patterns that informed how the team communicated findings to academic and practitioner audiences.</span>
+          </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" id="outreach">
+    <div class="section-label">Print + Digital Samples</div>
+    <h2>Outreach &amp; Event Materials</h2>
+    <p class="section-intro">Promotional and informational materials created for events, programs, and student-facing communications.</p>
+    
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/dsi.html">DSI / DISCO Network Event Outreach</a></h3>
+        <span class="project-tag tag-both">Print + Digital</span>
+      </div>
+      <div class="project-context">LSA Digital Studies Institute, University of Michigan &middot; Program Assistant</div>
+      <div class="project-thumb" onclick="location.href='projects/dsi.html'"><img src="dsi-event1.png" alt="DSI outreach email"></div>
+      <p>Led faculty outreach for DSI and DISCO Network events, drafting personalized emails to professors to promote lectures, book talks, and co-sponsored programming.</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/dsi.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>Managed initial outreach, follow-up communications, and co-sponsor coordination, providing ready-to-use promotional materials including paragraph descriptions, flyers, and sample social media posts.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Tailored each outreach email to the recipient&rsquo;s teaching and research interests, connecting event content to specific courses to encourage faculty to share with their students.</span>
+          </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" id="digital">
+    <div class="section-label">Digital Sample</div>
+    <h2>Digital &amp; Web Content</h2>
+    <p class="section-intro">Web content, documentation, and digital communications produced for institutional audiences.</p>
+    
+    <div class="project">
+      <div class="project-header">
+        <h3><a href="projects/disco.html">DISCO Network Digital Records &amp; Documentation</a></h3>
+        <span class="project-tag tag-digital">Digital</span>
+      </div>
+      <div class="project-context">LSA Digital Studies Institute, University of Michigan &middot; Program Assistant</div>
+      <div class="project-thumb" onclick="location.href='projects/disco.html'"><img src="disco-docs.png" alt="DISCO Network events archive"></div>
+      <p>Maintained and updated public-facing digital records and documentation infrastructure for the DISCO Network, ensuring long-term accessibility of program materials.</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <button class="expand-btn" onclick="toggleExpand(this)">More details <span class="arrow">&#9660;</span></button>
+        <a href="projects/disco.html" class="project-link">View full project &rarr;</a>
+      </div>
+      <div class="project-details">
+        
+          <p>Organized materials around user needs rather than internal categories, making it easier for external partners and new collaborators to find relevant resources.</p>
+          <div class="project-approach">
+            <strong>Creative Approach</strong>
+            <span>Restructured the documentation architecture to prioritize discoverability for users without institutional knowledge, while maintaining comprehensive archival coverage.</span>
+          </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="about">
+    <div class="section-label">Background</div>
+    <h2>About Me</h2>
+    <p class="section-intro">
+      I am a higher education professional whose academic path has spanned institutions in mainland China, Taiwan, and the United States. My work centers on student access, equity-focused assessment, and the kinds of institutional support that help students&mdash;especially those navigating unfamiliar systems&mdash;find their footing and thrive.
+    </p>
+    <div class="about-grid">
+      <div class="about-item">
+        <h4>Education</h4>
+        <p>M.A. in Higher Education, University of Michigan<br>B.A. in Management &amp; Education, Soochow University<br>Exchange: University of Taipei</p>
+      </div>
+      <div class="about-item">
+        <h4>Languages</h4>
+        <p>English (professional fluency)<br>Mandarin Chinese (native)<br>Traditional Chinese (native level)</p>
+      </div>
+      <div class="about-item">
+        <h4>Research Interests</h4>
+        <p>Student&ndash;faculty interaction, access and equity in higher education, first-generation student engagement</p>
+      </div>
+      <div class="about-item">
+        <h4>Contact</h4>
+        <p><a href="mailto:yeyz&#64;umich.edu" style="color:var(--navy-mid)">yeyz&#64;umich.edu</a><br>Ann Arbor, MI</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+
+<footer class="footer">
+  <p>&copy; 2026 Yangzhen (Michael) Ye &middot; <a href="mailto:yeyz&#64;umich.edu">yeyz&#64;umich.edu</a></p>
+</footer>
+
+
+<script>
+function openLightbox(el) {
+  event.stopPropagation();
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = el.src;
+  lb.classList.add('active');
+}
+function toggleExpand(btn) {
+  btn.closest('.project').classList.toggle('expanded');
+}
+</script>
+
+</body>
+</html>

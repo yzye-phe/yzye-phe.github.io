@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IGR Common Assessment of Learning Report, 2024–25 &mdash; Yangzhen (Michael) Ye</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0a1e3d; --navy-mid: #143056; --navy-light: #1d4272;
+  --slate: #3a5a7c; --sky: #6a9cc7; --ice: #d0e4f5;
+  --cream: #f7f9fc; --white: #ffffff; --gold: #c9a227;
+  --text: #1a1a2e; --text-mid: #4a4a5a; --text-light: #6e7185;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* HERO */
+.hero { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%); color: var(--white); padding: 5rem 2rem 4rem; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(106,156,199,0.12) 0%, transparent 70%); border-radius: 50%; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 { font-family: var(--font-display); font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.4em; }
+.hero h1 span { color: var(--sky); font-weight: 400; font-style: italic; }
+.hero-subtitle { font-size: 1.15rem; font-weight: 300; color: var(--ice); max-width: 600px; line-height: 1.7; margin-bottom: 1.5rem; }
+.hero-contact { display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+.hero-contact a { color: var(--sky); text-decoration: none; transition: color 0.2s; }
+.hero-contact a:hover { color: var(--gold); }
+
+/* NAV */
+.nav { background: var(--white); border-bottom: 1px solid var(--ice); position: sticky; top: 0; z-index: 100; padding: 0 2rem; }
+.nav-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 2rem; overflow-x: auto; }
+.nav a { display: block; padding: 1rem 0; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.nav a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+
+/* MAIN */
+.main { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 3.5rem 0 3rem; border-bottom: 1px solid #e2e8f0; }
+.section:last-child { border-bottom: none; }
+.section-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--slate); margin-bottom: 0.5rem; }
+.section h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+.section-intro { color: var(--text-mid); font-size: 1rem; max-width: 620px; margin-bottom: 2rem; }
+
+/* PROJECT CARD */
+.project { background: var(--white); border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.8rem 2rem; margin-bottom: 1.2rem; transition: box-shadow 0.25s, border-color 0.25s; }
+.project:hover { box-shadow: 0 4px 20px rgba(10,30,61,0.07); border-color: var(--sky); }
+.project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; }
+.project h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--navy-mid); }
+.project h3 a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.project h3 a:hover { border-bottom-color: var(--gold); }
+.project-tag { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25em 0.7em; border-radius: 3px; white-space: nowrap; flex-shrink: 0; }
+.tag-print { background: var(--ice); color: var(--navy-mid); }
+.tag-digital { background: #e8f5e9; color: #2e6b33; }
+.tag-both { background: #fff3e0; color: #8a5a00; }
+.project-context { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.7rem; font-style: italic; }
+.project p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.8rem; }
+
+/* THUMBNAIL (overview on index) */
+.project-thumb { width: 100%; aspect-ratio: 16/9; border-radius: 4px; margin-bottom: 1rem; overflow: hidden; cursor: pointer; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.project-thumb:hover img { transform: scale(1.03); }
+.project-thumb.ratio-3-2 { aspect-ratio: 3/2; }
+.project-thumb img.contain { object-fit: contain; background: #f0f4f8; }
+.project-thumb img.dark-bg { background: #0a1e3d; }
+
+/* EXPANDABLE DETAILS */
+.project-details { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.project.expanded .project-details { max-height: 600px; }
+.expand-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; color: var(--slate); background: none; border: none; cursor: pointer; padding: 0.5rem 0; transition: color 0.2s; }
+.expand-btn:hover { color: var(--navy); }
+.expand-btn .arrow { display: inline-block; transition: transform 0.3s; font-size: 0.7rem; }
+.project.expanded .expand-btn .arrow { transform: rotate(180deg); }
+
+/* PROJECT APPROACH */
+.project-approach { background: var(--cream); border-left: 3px solid var(--gold); padding: 0.8rem 1rem; margin-top: 1rem; border-radius: 0 4px 4px 0; }
+.project-approach strong { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); display: block; margin-bottom: 0.3rem; }
+.project-approach span { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+
+/* VIEW PROJECT LINK */
+.project-link { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; font-weight: 600; color: var(--navy-mid); text-decoration: none; border-bottom: 1px solid var(--sky); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.project-link:hover { color: var(--gold); border-color: var(--gold); }
+
+/* IMAGE GALLERY (detail pages) */
+.project-gallery { display: grid; gap: 8px; margin-bottom: 1rem; border-radius: 4px; overflow: hidden; }
+.project-gallery.grid-2 { grid-template-columns: 1fr 1fr; }
+.project-gallery.grid-2 img { aspect-ratio: 4/3; }
+.project-gallery.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.project-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; border: 1px solid #e2e8f0; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.project-gallery img:hover { transform: scale(1.02); box-shadow: 0 2px 12px rgba(10,30,61,0.12); }
+
+/* FULL IMAGE (detail pages) */
+.project-full-image { width: 100%; border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; }
+.project-full-image img { width: 100%; object-fit: contain; }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.about-item h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate); margin-bottom: 0.4rem; }
+.about-item p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.6; }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(10,30,61,0.92); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; padding: 2rem; }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,0.4); }
+
+/* FOOTER */
+.footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem; font-size: 0.82rem; margin-top: 2rem; }
+.footer a { color: var(--sky); text-decoration: none; }
+
+/* BACK LINK (detail pages) */
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--slate); text-decoration: none; margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--navy); }
+
+/* DETAIL PAGE BODY */
+.detail-body h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--navy-mid); margin: 1.5rem 0 0.5rem; }
+.detail-body ul { margin-left: 1.2em; margin-bottom: 1rem; }
+.detail-body li { color: var(--text-mid); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.4rem; }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .main { padding: 0 1.5rem; }
+  .project { padding: 1.4rem 1.2rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .nav-inner { gap: 1.2rem; }
+  .project-gallery.grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-inner > * { animation: fadeUp 0.6s ease-out both; }
+.hero h1 { animation-delay: 0.1s; }
+.hero-subtitle { animation-delay: 0.2s; }
+.hero-contact { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Yangzhen <span>(Michael)</span> Ye</h1>
+    <p class="hero-subtitle">
+      Higher education professional with experience in student advising, equity-centered assessment, and program coordination. M.A. in Higher Education, University of Michigan.
+    </p>
+    <div class="hero-contact">
+      <span>&#x1F4CD; Ann Arbor, MI</span>
+      <a href="mailto:yeyz&#64;umich.edu">yeyz&#64;umich.edu</a>
+      <span>Bilingual: English &middot; Mandarin Chinese</span>
+    </div>
+  </div>
+</header>
+
+
+<main class="main">
+  <section class="section" style="border-bottom:none;">
+    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+
+    <div class="section-label">Print</div>
+    <h2 style="font-size:1.8rem;">IGR Common Assessment of Learning Report, 2024&ndash;25</h2>
+    <p class="project-context" style="margin-bottom:1.5rem;">Intergroup Relations, University of Michigan &middot; Assessment Researcher</p>
+
+    
+          <div class="project-gallery grid-3">
+            <img src="../igr-cover.png" alt="Report cover / table of contents" onclick="openLightbox(this)">
+            <img src="../igr-data.png" alt="Data visualization: growth comparison by first-generation status" onclick="openLightbox(this)">
+            <img src="../igr-findings.png" alt="Key conclusions and findings" onclick="openLightbox(this)">
+          </div>
+        
+
+    <div class="detail-body">
+      
+          <h4>Project Overview</h4>
+          <p>The IGR Common Assessment of Learning is an annual evaluation of the Intergroup Relations program at the University of Michigan. As Assessment Researcher, I was the sole author of the 2024&ndash;25 report&mdash;a 24-page institutional document covering methodology, demographic analysis, cross-course growth comparisons, and equity-focused findings.</p>
+
+          <h4>My Contributions</h4>
+          <ul>
+            <li>Designed the full evaluation plan, including survey instruments, data collection protocols, and the analytic framework for disaggregating outcomes by race, gender, first-generation status, socioeconomic background, sexual orientation, religion, and geography.</li>
+            <li>Conducted all quantitative analysis: paired-samples t-tests, ANOVA with post-hoc comparisons, and effect size calculations across six IGR courses (ALA 122 through ALA 471).</li>
+            <li>Authored the complete report from executive summary through appendices, translating statistical findings into accessible, decision-ready prose for senior leadership and external stakeholders.</li>
+            <li>Presented findings and recommendations to IGR leadership; recommendations were formally adopted into the annual reporting cycle.</li>
+          </ul>
+
+          <h4>Key Findings</h4>
+          <ul>
+            <li><strong>Consistent Impact:</strong> All six courses produced statistically significant growth (p&nbsp;&lt;&nbsp;.001) in identity awareness, relationship-building, and social action capacity.</li>
+            <li><strong>Equitable Outcomes:</strong> No statistically significant differences in learning gains between students of color and white students, first-generation and non-first-generation students, or across gender and socioeconomic groups&mdash;evidence of genuinely inclusive pedagogy.</li>
+            <li><strong>Scaffolded Pathway:</strong> A cumulative learning effect across the ALA course sequence validated IGR&rsquo;s curricular design from foundational dialogue to advanced facilitation.</li>
+          </ul>
+
+          <h4>Creative Approach</h4>
+          <p>Structured the report to lead with student voice and disaggregated data, making equity gaps (and their absence) visible before presenting recommendations. Used a clear visual system&mdash;Michigan maize-and-blue bar charts, consistent figure labeling, and summary callouts&mdash;to ensure non-specialist audiences could engage with the findings. The report was designed to be read both as a quick executive summary and as a detailed reference document.</p>
+        
+    </div>
+  </section>
+</main>
+
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+
+<footer class="footer">
+  <p>&copy; 2026 Yangzhen (Michael) Ye &middot; <a href="mailto:yeyz&#64;umich.edu">yeyz&#64;umich.edu</a></p>
+</footer>
+
+
+<script>
+function openLightbox(el) {
+  event.stopPropagation();
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = el.src;
+  lb.classList.add('active');
+}
+function toggleExpand(btn) {
+  btn.closest('.project').classList.toggle('expanded');
+}
+</script>
+
+</body>
+</html>
