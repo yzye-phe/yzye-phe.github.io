@@ -1,671 +1,391 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yangzhen (Michael) Ye — Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yangzhen (Michael) Ye — Higher Education Research</title>
+<meta name="description" content="Yangzhen (Michael) Ye is a first-generation college student and higher education researcher at the University of Michigan, studying first-generation students, inequality, student success, and the philosophy of higher education.">
+<meta name="author" content="Yangzhen (Michael) Ye">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1623" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://yzye-phe.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yangzhen (Michael) Ye — Higher Education Research">
+<meta property="og:description" content="What happens after the door of higher education opens: first-generation students, inequality, student success, and the philosophy of higher education.">
+<meta property="og:url" content="https://yzye-phe.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --navy: #0a1e3d;
-  --navy-mid: #143056;
-  --navy-light: #1d4272;
-  --slate: #3a5a7c;
-  --sky: #6a9cc7;
-  --ice: #d0e4f5;
-  --cream: #f7f9fc;
-  --white: #ffffff;
-  --gold: #c9a227;
-  --text: #1a1a2e;
-  --text-mid: #4a4a5a;
-  --text-light: #6e7185;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--font-body);
-  color: var(--text);
-  background: var(--cream);
-  line-height: 1.7;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
-  color: var(--white);
-  padding: 5rem 2rem 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -30%; right: -10%;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(106,156,199,0.12) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
-.hero-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 0.4em;
-}
-
-.hero h1 span {
-  color: var(--sky);
-  font-weight: 400;
-  font-style: italic;
-}
-
-.hero-subtitle {
-  font-size: 1.15rem;
-  font-weight: 300;
-  color: var(--ice);
-  max-width: 600px;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-
-.hero-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-}
-
-.hero-contact a {
-  color: var(--sky);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.hero-contact a:hover { color: var(--gold); }
-
-/* ── NAV ── */
-.nav {
-  background: var(--white);
-  border-bottom: 1px solid var(--ice);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 0 2rem;
-}
-
-.nav-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-}
-
-.nav a {
-  display: block;
-  padding: 1rem 0;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-light);
-  text-decoration: none;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.nav a:hover, .nav a.active {
-  color: var(--navy);
-  border-bottom-color: var(--gold);
-}
-
-/* ── MAIN ── */
-.main { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-
-/* ── SECTION ── */
-.section {
-  padding: 3.5rem 0 3rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.section:last-child { border-bottom: none; }
-
-.section-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--slate);
-  margin-bottom: 0.5rem;
-}
-
-.section h2 {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.6rem;
-  letter-spacing: -0.01em;
-}
-
-.section-intro {
-  color: var(--text-mid);
-  font-size: 1rem;
-  max-width: 620px;
-  margin-bottom: 2rem;
-}
-
-/* ── PROJECT CARD ── */
-.project {
-  background: var(--white);
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 1.8rem 2rem;
-  margin-bottom: 1.2rem;
-  transition: box-shadow 0.25s, border-color 0.25s;
-}
-
-.project:hover {
-  box-shadow: 0 4px 20px rgba(10,30,61,0.07);
-  border-color: var(--sky);
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 0.6rem;
-}
-
-.project h3 {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--navy-mid);
-}
-
-.project-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.25em 0.7em;
-  border-radius: 3px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.tag-print {
-  background: var(--ice);
-  color: var(--navy-mid);
-}
-
-.tag-digital {
-  background: #e8f5e9;
-  color: #2e6b33;
-}
-
-.tag-both {
-  background: #fff3e0;
-  color: #8a5a00;
-}
-
-.project-context {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  margin-bottom: 0.7rem;
-  font-style: italic;
-}
-
-.project p {
-  color: var(--text-mid);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 0.8rem;
-}
-
-.project-approach {
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
-  padding: 0.8rem 1rem;
-  margin-top: 1rem;
-  border-radius: 0 4px 4px 0;
-}
-
-.project-approach strong {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--slate);
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.project-approach span {
-  font-size: 0.9rem;
-  color: var(--text-mid);
-  line-height: 1.6;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--navy-mid);
-  text-decoration: none;
-  border-bottom: 1px solid var(--sky);
-  padding-bottom: 1px;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.project-link:hover {
-  color: var(--gold);
-  border-color: var(--gold);
-}
-
-/* ── IMAGE PLACEHOLDER ── */
-.project-image {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: linear-gradient(135deg, var(--ice) 0%, #e2e8f0 100%);
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--slate);
-  font-size: 0.85rem;
-  font-style: italic;
-  border: 1px dashed #c0d0e0;
-}
-
-/* ── IMAGE GRID (for multiple screenshots) ── */
-.project-gallery {
-  display: grid;
-  gap: 8px;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.project-gallery.grid-2 { grid-template-columns: 1fr 1fr; }
-.project-gallery.grid-2 img { aspect-ratio: 4/3; }
-.project-gallery.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-.project-gallery.grid-4 { grid-template-columns: 1fr 1fr; }
-
-.project-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 3px;
-  border: 1px solid #e2e8f0;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-gallery img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 2px 12px rgba(10,30,61,0.12);
-}
-
-/* lightbox for full-size view */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(10,30,61,0.92);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-  padding: 2rem;
-}
-
-.lightbox.active { display: flex; }
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-}
-
-/* ── ABOUT SECTION ── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.about-item h4 {
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--slate);
-  margin-bottom: 0.4rem;
-}
-
-.about-item p {
-  font-size: 0.95rem;
-  color: var(--text-mid);
-  line-height: 1.6;
-}
-
-/* ── FOOTER ── */
-.footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.5);
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.82rem;
-  margin-top: 2rem;
-}
-
-.footer a {
-  color: var(--sky);
-  text-decoration: none;
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 640px) {
-  .hero { padding: 3.5rem 1.5rem 3rem; }
-  .hero h1 { font-size: 2.2rem; }
-  .main { padding: 0 1.5rem; }
-  .project { padding: 1.4rem 1.2rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  .nav-inner { gap: 1.2rem; }
-}
-
-/* ── ANIMATION ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.hero-inner > * {
-  animation: fadeUp 0.6s ease-out both;
-}
-
-.hero h1 { animation-delay: 0.1s; }
-.hero-subtitle { animation-delay: 0.2s; }
-.hero-contact { animation-delay: 0.3s; }
-</style>
-</head>
-<body>
-
-<!-- ════════════════════════════════════════ HERO ════════════════════════════════════════ -->
-<header class="hero">
-  <div class="hero-inner">
-    <h1>Yangzhen <span>(Michael)</span> Ye</h1>
-    <p class="hero-subtitle">
-      Higher education professional with experience in student advising, equity-centered assessment, and program coordination. M.A. in Higher Education, University of Michigan.
-    </p>
-    <div class="hero-contact">
-      <span>📍 Ann Arbor, MI</span>
-      <a href="mailto:yeyz@umich.edu">yeyz@umich.edu</a>
-      <span>Bilingual: English · Mandarin Chinese</span>
-    </div>
-  </div>
-</header>
-
-<!-- ════════════════════════════════════════ NAV ════════════════════════════════════════ -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#reports">Reports</a>
-    <a href="#presentations">Presentations</a>
-    <a href="#outreach">Outreach Materials</a>
-    <a href="#digital">Digital Content</a>
-    <a href="#about">About</a>
-  </div>
-</nav>
-
-<!-- ════════════════════════════════════════ MAIN ════════════════════════════════════════ -->
-<main class="main">
-
-  <!-- ── REPORTS ── -->
-  <section class="section" id="reports">
-    <div class="section-label">Print Sample</div>
-    <h2>Institutional Reports</h2>
-    <p class="section-intro">
-      Equity-focused research and assessment reports produced for institutional leadership and external stakeholders.
-    </p>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>IGR Common Assessment of Learning Report, 2024–25</h3>
-        <span class="project-tag tag-print">Print</span>
-      </div>
-      <div class="project-context">Intergroup Relations, University of Michigan · Assessment Researcher</div>
-      <!-- Replace src values with your actual image files -->
-      <div class="project-gallery grid-3">
-        <img src="igr-cover.png" alt="IGR Report cover page" onclick="openLightbox(this)">
-        <img src="igr-data.png" alt="IGR Report data visualization" onclick="openLightbox(this)">
-        <img src="igr-findings.png" alt="IGR Report key findings" onclick="openLightbox(this)">
-      </div>
-      <p>
-        Designed and executed a comprehensive equity-focused evaluation of the 2024–25 Common Assessment of Learning program. The report examined student outcomes across identity subgroups with attention to access, bias interruption, and institutional support. Recognized by senior staff as "one of the best reports in years," with recommendations formally adopted into IGR's annual reporting cycle.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          <!-- TODO: Michael to fill in his own explanation of design/communication choices -->
-          Structured the report to lead with student voice and disaggregated data, making equity gaps visible before presenting recommendations. Used accessible visual summaries to ensure non-specialist audiences—administrators, program staff, community partners—could engage with the findings without losing the nuance of the underlying data.
-        </span>
-      </div>
-      <!-- TODO: Add link to PDF if shareable -->
-      <!-- <a href="files/igr-report.pdf" class="project-link" target="_blank">View full report →</a> -->
-    </div>
-
-  </section>
-
-  <!-- ── PRESENTATIONS ── -->
-  <section class="section" id="presentations">
-    <div class="section-label">Digital Sample</div>
-    <h2>Presentations &amp; Posters</h2>
-    <p class="section-intro">
-      Conference presentations and visual materials designed for academic and professional audiences.
-    </p>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>AEFP 2026 Conference Poster</h3>
-        <span class="project-tag tag-both">Print + Digital</span>
-      </div>
-      <div class="project-context">Association for Education Finance and Policy · Annual Meeting 2026</div>
-      <div class="project-image" style="aspect-ratio:3/2;"><img src="poster.png" alt="AEFP 2026 research poster" style="width:100%;height:100%;object-fit:contain;cursor:pointer;background:#f0f4f8;" onclick="openLightbox(this)"></div>
-      <p>
-        Designed and presented a research poster on student–faculty interaction patterns and GPA outcomes using the ELS:2002 dataset. The poster communicated complex regression findings to a mixed audience of researchers, policymakers, and practitioners.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          <!-- TODO: Fill in -->
-          Prioritized visual clarity: used a limited color palette to direct attention to key findings, and structured the layout so that the equity narrative was readable in a 60-second scan while supporting deeper engagement for interested viewers.
-        </span>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>JMM 2026 Invited Talk: Stakeholder Engagement in Interactive Textbook Design</h3>
-        <span class="project-tag tag-digital">Digital</span>
-      </div>
-      <div class="project-context">SIGMAA on RUME Special Session, Joint Mathematics Meetings 2026 · Co-author (PI: Dr. Vilma Mesa)</div>
-      <div class="project-image"><img src="jmm.png" alt="JMM 2026 invited talk title slide" style="width:100%;height:100%;object-fit:contain;cursor:pointer;background:#0a1e3d;" onclick="openLightbox(this)"></div>
-      <p>
-        Co-authored an invited talk on involving stakeholders in the development of interactive questions for PROTEUS textbooks. Contributed to stakeholder engagement design and data collection. Presented by Dr. Vilma Mesa at the SIGMAA on RUME Special Session.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          <!-- TODO: Fill in -->
-          Designed the stakeholder engagement process to center student perspectives alongside faculty input, ensuring that interactive textbook questions reflected how students actually encounter and work through mathematical concepts.
-        </span>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>RUME 2026: Student Agency in Collaborative Textbook Development</h3>
-        <span class="project-tag tag-digital">Digital</span>
-      </div>
-      <div class="project-context">28th Conference on Research in Undergraduate Mathematics Education · Co-author (PI: Dr. Vilma Mesa)</div>
-      <div class="project-image"><img src="rume.png" alt="RUME 2026 presentation title slide" style="width:100%;height:100%;object-fit:contain;cursor:pointer;background:#0a1e3d;" onclick="openLightbox(this)"></div>
-      <p>
-        Co-authored a peer-reviewed paper on student agency in the collaborative development of novel interactive textbook questions in calculus and linear algebra. Contributed to transcript analysis and interpretation of agency-related findings. Presented by Dr. Johannah Crandall.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          <!-- TODO: Fill in -->
-          Applied qualitative coding focused on moments where students exercised or were denied agency in the design process, surfacing patterns that informed how the research team communicated findings to both academic and practitioner audiences.
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── OUTREACH MATERIALS ── -->
-  <section class="section" id="outreach">
-    <div class="section-label">Print + Digital Samples</div>
-    <h2>Outreach &amp; Event Materials</h2>
-    <p class="section-intro">
-      Promotional and informational materials created for events, programs, and student-facing communications.
-    </p>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>DSI / DISCO Network Event Materials</h3>
-        <span class="project-tag tag-both">Print + Digital</span>
-      </div>
-      <div class="project-context">LSA Digital Studies Institute, University of Michigan · Program Assistant</div>
-      <!-- Replace src values with your actual screenshots -->
-      <div class="project-gallery grid-2">
-        <img src="dsi-event1.png" alt="DSI event outreach email" onclick="openLightbox(this)">
-        <img src="dsi-event2.png" alt="DISCO event communication" onclick="openLightbox(this)">
-      </div>
-      <p>
-        Led faculty outreach for DSI and DISCO Network events, drafting and sending personalized emails to professors across departments to promote lectures, book talks, and co-sponsored programming. Managed initial outreach, follow-up communications, and coordination with co-sponsors, providing ready-to-use promotional materials including paragraph descriptions, flyers, and sample social media posts.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          Tailored each outreach email to the recipient's teaching and research interests, connecting event content to specific courses to encourage faculty to share with their students. Structured communications to make it as easy as possible for busy faculty to act: clear event details, direct registration links, and pre-written promotional copy they could forward immediately.
-        </span>
-      </div>
-    </div>
-
-    <!-- TODO: Add more outreach entries (e.g., debate program flyers, Soochow event materials) -->
-  </section>
-
-  <!-- ── DIGITAL CONTENT ── -->
-  <section class="section" id="digital">
-    <div class="section-label">Digital Sample</div>
-    <h2>Digital &amp; Web Content</h2>
-    <p class="section-intro">
-      Web content, documentation, and digital communications produced for institutional audiences.
-    </p>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>DISCO Network Digital Records &amp; Documentation</h3>
-        <span class="project-tag tag-digital">Digital</span>
-      </div>
-      <div class="project-context">LSA Digital Studies Institute, University of Michigan · Program Assistant</div>
-      <div class="project-gallery grid-2">
-        <img src="disco-docs.png" alt="DISCO Network events archive" onclick="openLightbox(this)">
-        <img src="disco-docs2.png" alt="DISCO Network documentation" onclick="openLightbox(this)">
-      </div>
-      <p>
-        Maintained and updated public-facing digital records and documentation infrastructure for the DISCO Network, ensuring long-term accessibility and usability of program materials for current and future stakeholders.
-      </p>
-      <div class="project-approach">
-        <strong>Creative Approach</strong>
-        <span>
-          <!-- TODO: Fill in -->
-          Organized materials around user needs rather than internal categories, making it easier for external partners and new collaborators to locate relevant resources without institutional knowledge.
-        </span>
-      </div>
-    </div>
-
-    <!-- TODO: Add more digital content entries -->
-  </section>
-
-  <!-- ── ABOUT ── -->
-  <section class="section" id="about">
-    <div class="section-label">Background</div>
-    <h2>About Me</h2>
-    <p class="section-intro">
-      I am a higher education professional whose academic path has spanned institutions in mainland China, Taiwan, and the United States. My work centers on student access, equity-focused assessment, and the kinds of institutional support that help students—especially those navigating unfamiliar systems—find their footing and thrive.
-    </p>
-    <div class="about-grid">
-      <div class="about-item">
-        <h4>Education</h4>
-        <p>M.A. in Higher Education, University of Michigan<br>B.A. in Management & Education, Soochow University<br>Exchange: University of Taipei</p>
-      </div>
-      <div class="about-item">
-        <h4>Languages</h4>
-        <p>English (professional fluency)<br>Mandarin Chinese (native)<br>Traditional Chinese (native level)</p>
-      </div>
-      <div class="about-item">
-        <h4>Research Interests</h4>
-        <p>Student–faculty interaction, access and equity in higher education, first-generation student engagement</p>
-      </div>
-      <div class="about-item">
-        <h4>Contact</h4>
-        <p><a href="mailto:yeyz@umich.edu" style="color:var(--navy-mid)">yeyz@umich.edu</a><br>Ann Arbor, MI</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-<footer class="footer">
-  <p>&copy; 2026 Yangzhen (Michael) Ye &middot; <a href="mailto:yeyz@umich.edu">yeyz@umich.edu</a></p>
-</footer>
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
 <script>
-function openLightbox(el) {
-  var lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = el.src;
-  lb.classList.add('active');
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yangzhen Ye",
+  "alternateName": "Michael Ye",
+  "jobTitle": "Research Associate II",
+  "worksFor": { "@type": "Organization", "name": "University of Michigan" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Michigan" },
+    { "@type": "CollegeOrUniversity", "name": "University of Taipei" },
+    { "@type": "CollegeOrUniversity", "name": "Soochow University" }
+  ],
+  "email": "mailto:yeyzphe@gmail.com",
+  "url": "https://yzye-phe.github.io/",
+  "sameAs": ["https://www.linkedin.com/in/yangzhen-michael-ye"],
+  "knowsAbout": ["First-generation college students", "Higher education inequality", "Student success", "Philosophy of higher education", "Survey research"]
 }
 </script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Yangzhen (Michael) Ye — home">
+      <span class="brand-mark" aria-hidden="true">Y<i>.</i></span>
+      <span class="brand-text">Yangzhen <em>(Michael)</em> Ye</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Site">
+      <a href="index.html" class="is-active" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html">Experience</a>
+      <a href="writing.html">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch color theme">
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.6 6.6 0 0 0 9.7 9.7z"/></svg>
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+      </button>
+      <a class="btn btn-sm btn-primary" href="assets/docs/Yangzhen_Ye_CV.pdf" target="_blank" rel="noopener">CV</a>
+      <button class="icon-btn menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="i-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+</header>
+
+<main id="main">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span>Higher education · Inequality · Student success</p>
+        <h1 class="hero-name"><span class="name-line">Yangzhen</span> <span class="name-line"><span class="aka">(Michael)</span> Ye</span></h1>
+        <p class="hero-lede">Universities have opened their doors wider than ever. I study what happens <mark class="hl">inside</mark>: who is told the rules, who is left to guess them, and whose efforts the institution rewards.</p>
+        <p class="hero-sub">I am a first-generation college student and a Research Associate II at the University of Michigan, where I earned an M.A. in Higher Education. I work with national longitudinal data and careful measurement, and with a comparative eye trained in the United States, mainland China, and Taiwan.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="research.html">Read my research <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="experience.html">Experience</a>
+          <a class="btn btn-ghost" href="assets/docs/Yangzhen_Ye_CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Now</dt><dd>Research Associate II, RTMUS Lab, University of Michigan</dd></div>
+          <div><dt>Interests</dt><dd>First-generation students · inequality · student success · philosophy of higher education</dd></div>
+          <div><dt>Based in</dt><dd>Ann Arbor, Michigan</dd></div>
+        </dl>
+      </div>
+
+      <figure class="quote-card card" data-reveal>
+        <p class="quote-kicker">Three passions</p>
+        <blockquote class="quote-en">
+          <p>“Three passions, simple but overwhelmingly strong, have governed my life:</p>
+          <ol class="passions">
+            <li style="--i:0"><span aria-hidden="true">01</span>the longing for love,</li>
+            <li style="--i:1"><span aria-hidden="true">02</span>the search for knowledge,</li>
+            <li style="--i:2"><span aria-hidden="true">03</span>and unbearable pity for the suffering of mankind.”</li>
+          </ol>
+        </blockquote>
+        <figcaption class="quote-cite">— Bertrand Russell, prologue to his <cite>Autobiography</cite></figcaption>
+      </figure>
+    </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <!-- ============================== 01 ABOUT ============================== -->
+  <section class="section band-tint" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-side" data-reveal>
+        <span class="section-index">01</span>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">Where the question comes from</h2>
+        <p class="about-note">A first-generation college student — born in a village, raised in Suzhou, and trained in Suzhou, Taipei, and Ann Arbor.</p>
+        <blockquote class="about-quote"><p>“The deepest kind of not knowing is not knowing that you don’t know.”</p></blockquote>
+      </div>
+
+      <div class="chapters">
+        <article class="chapter" data-reveal>
+          <p class="chapter-label"><b>I</b>Home</p>
+          <div class="chapter-text">
+            <p>I was born in a small village in a border region of China. When I was two, my parents moved our family to Suzhou to make a living. Neither of them had finished middle school. Long before I knew what a university was, they told me I had to go to one: a degree was the road to a good life, and the way out of earning a living the hard, humbling way they did. All over China, parents who have never set foot on a campus say the same words to their children, and they hold the university in something close to reverence. My interest in higher education began there. What is this institution that is supposed to change a family’s fortune?</p>
+          </div>
+        </article>
+
+        <article class="chapter" data-reveal>
+          <p class="chapter-label"><b>II</b>Campus</p>
+          <div class="chapter-text">
+            <p>I got in, and found that a university keeps rules no one writes down. In my first weeks at Soochow University, a classmate asked whether I had taken the ACCA yet. I asked what that was; he had already passed two papers. My classmates seemed to know which professors one could approach, which scholarships existed, which certificates counted, and how early to start. I learned those rules late, mostly by missing them, and for a while I could only imitate a way of carrying myself that was not mine. Bourdieu later gave me a word for it — habitus — and the sociology of education turned what I had taken for a personal failing into a pattern, and self-blame into a research question.</p>
+          </div>
+        </article>
+
+        <article class="chapter" data-reveal>
+          <p class="chapter-label"><b>III</b>A village school</p>
+          <div class="chapter-text">
+            <p>The summer after my second year, I taught at a rural primary school in Henan. One boy, a cheerful troublemaker, told me his dream was to buy a motorcycle after middle school and ride it everywhere. I asked about high school. He asked me what high school was. In his world, higher education did not exist even as an idea. I had made it through the door; he had never seen it. The deepest kind of not knowing, I learned, is not knowing that you don’t know.</p>
+          </div>
+        </article>
+
+        <article class="chapter" data-reveal>
+          <p class="chapter-label"><b>IV</b>Three systems</p>
+          <div class="chapter-text">
+            <p>As an exchange student in Taipei, I watched another system keep the same promise by other means. Mainland China sorted students into tiers of institutions; Taiwan opened universities until nearly everyone could enter; the United States built community colleges. Each promised a seat for everyone, and each arrived at a strikingly similar hierarchy. At Michigan’s Marsal Family School of Education, I saw what the alternative can look like: mentors who answered questions I did not know to ask, and research and funding opportunities that made a first-generation student feel seen. That is why I study institutions, and not only the students who pass through them.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 02 RESEARCH INTERESTS ============================== -->
+  <section class="section" id="interests" aria-labelledby="interests-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <span class="section-index">02</span>
+        <div>
+          <p class="eyebrow">Research interests</p>
+          <h2 id="interests-title">What happens after the door opens?</h2>
+          <p class="section-deck">A child from a village, whose parents never went to college, gets into an ordinary university during the expansion, moves to the city, and takes an office job. Has the family moved up? I think it has: this is what generations hoped for — the firecrackers at the village gate, the extra cup of wine a father allows himself at dinner. But one swallow does not make a spring. The question I keep returning to lies beneath such stories: as the doors open wider, does the invisible thread between where students come from and where they end up grow slack, stay taut, or pull tighter?</p>
+        </div>
+      </header>
+
+      <div class="thesis">
+        <div class="thesis-copy" data-reveal>
+          <p class="thesis-line">The ladder has grown taller. My question is whether the order on it has changed.</p>
+          <p>Imagine two children born in the same year, one in a village and one in a professor’s home. Before the expansion, the village child leaves school after ninth grade to work, and the professor’s child goes to a key university. After it, the village child earns an ordinary bachelor’s degree, and the professor’s child goes to an elite university and then abroad for graduate school. Both climbed: that is absolute mobility. Whether the distance between them closed is relative mobility — and evidence for the first does not settle the second.</p>
+        </div>
+        <figure class="ladder-fig card" data-reveal style="--rd:90ms">
+          <div class="fig-head">
+            <span class="fig-num">A thought experiment</span>
+            <span>Schematic, not data</span>
+          </div>
+          <p class="fig-title">Two children, two eras</p>
+          <ul class="legend" aria-hidden="true">
+            <li><span class="swatch dot s2"></span>Child from a village</li>
+            <li><span class="swatch dot s1"></span>Child of a professor</li>
+          </ul>
+          <div class="chart" data-chart="ladder"></div>
+          <figcaption class="fig-caption">Both children climb one rung. The distance between them stays the same.</figcaption>
+        </figure>
+      </div>
+
+      <div class="interest-grid">
+        <article class="interest-card card" data-reveal>
+          <p class="interest-num">01</p>
+          <h3>The rules behind the wall</h3>
+          <p class="interest-tag">First-generation students · the hidden curriculum</p>
+          <p>Exam rules are posted on the wall, and rural students who trust them can win by them. Inside the university, many rules move behind the wall: that a professor’s door is meant to be knocked on, which internships count, how early to plan for graduate school. I study who learns these rules, when, and at what cost. I also borrow a test from Kant: would a rule still work if it were posted for everyone to read? One that works only in the dark already looks unjust.</p>
+          <p class="conversation"><b>In conversation with</b> Jack · Armstrong &amp; Hamilton · Lareau · Bourdieu · Kant</p>
+          <p class="interest-links"><a href="research.html#paper-open-doors">Open Doors, Uneven Knocking</a><a href="research.html#talk-aefp">Faculty contact and GPA</a></p>
+        </article>
+
+        <article class="interest-card card" data-reveal style="--rd:80ms">
+          <p class="interest-num">02</p>
+          <h3>Expansion, credentials, and mobility</h3>
+          <p class="interest-tag">Massification · stratification · credential inflation</p>
+          <p>Students carry two kinds of assets into college. Some are visible — scores, admission letters, the diploma four years later — and hard work can earn them. Others are invisible — networks, horizons, a safety net, the knack of reading unwritten rules — and they are mostly inherited. Expansion devalues the first and raises the price of the second. The door opened, but the contest moved: from the ground where poor students can win to the ground where they rarely do.</p>
+          <p class="conversation"><b>In conversation with</b> Collins · Hirsch · Lucas · Hout · Torche · Zhou</p>
+          <p class="interest-links"><a href="research.html#paper-degrees">Same Degree, Different Doors</a><a href="research.html#paper-ai">Who Opens an AI Degree, and When?</a></p>
+        </article>
+
+        <article class="interest-card card" data-reveal>
+          <p class="interest-num">03</p>
+          <h3>Belonging and student success</h3>
+          <p class="interest-tag">Student success · intergroup relations</p>
+          <p>A sense of belonging shapes how students do and how they feel. I think it is better understood as something students carry into college than as a mindset an intervention installs: a disposition patterned by class, whose value depends on the institution that receives it. I want to know when institutions reward it, and how intergroup dialogue and everyday campus life help build it.</p>
+          <p class="conversation"><b>In conversation with</b> Walton &amp; Cohen · Tinto · Strayhorn · Bourdieu</p>
+          <p class="interest-links"><a href="research.html#paper-belonging">Belonging as a Class-Patterned Disposition</a><a href="research.html#report-igr">IGR Common Assessment of Learning</a></p>
+        </article>
+
+        <article class="interest-card card" data-reveal style="--rd:80ms">
+          <p class="interest-num">04</p>
+          <h3>The philosophy of higher education</h3>
+          <p class="interest-tag">Responsibility · fairness · merit</p>
+          <p>What does a university owe the students it admits? I separate causing an injustice from permitting a foreseeable one, and I take seriously Kant’s demand that people be treated as ends, never merely as means — including when enrollment is expanded to absorb a weak labor market. I distrust easy answers, too. Moving hidden rules onto the wall trades a concealed inequality for a visible one, and a fairer meritocracy, as Sandel warns, is still a meritocracy. Visible is better. It is a beginning.</p>
+          <p class="conversation"><b>In conversation with</b> Kant · Confucius · Sandel</p>
+          <p class="interest-links"><a href="writing.html">Essay: Inside and Outside the Door</a></p>
+        </article>
+      </div>
+
+      <div class="work-grid" aria-label="How I work">
+        <div class="work-item" data-reveal>
+          <h3><span>01</span>Patterns, then meanings</h3>
+          <p>National longitudinal surveys such as HSLS:09 and ELS:2002 show the patterns; transcripts, open-ended answers, and conversations show what they mean.</p>
+        </div>
+        <div class="work-item" data-reveal style="--rd:70ms">
+          <h3><span>02</span>Measure before comparing</h3>
+          <p>Before I compare groups, I check that an instrument means the same thing to each of them.</p>
+        </div>
+        <div class="work-item" data-reveal style="--rd:140ms">
+          <h3><span>03</span>Arguments that can lose</h3>
+          <p>I write down in advance what evidence would prove me wrong. An argument nothing could refute is a belief, not a finding.</p>
+        </div>
+        <div class="work-item" data-reveal style="--rd:210ms">
+          <h3><span>04</span>Three systems at once</h3>
+          <p>I read U.S. findings against mainland China and Taiwan, where the same promise took different institutional forms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 03 EDUCATION ============================== -->
+  <section class="section band-tint" id="education" aria-labelledby="education-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <span class="section-index">03</span>
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">Three systems of higher education</h2>
+          <p class="section-deck">I have studied in three systems that made the same promise in different ways, and each taught me something different about it.</p>
+        </div>
+      </header>
+
+      <div class="edu-grid">
+        <article class="edu-card card" data-reveal>
+          <p class="edu-coords">42.28° N · 83.74° W</p>
+          <p class="edu-place">Ann Arbor, Michigan</p>
+          <h3>University of Michigan</h3>
+          <p class="edu-school">Marsal Family School of Education</p>
+          <p class="edu-degree">M.A., Higher Education</p>
+          <p class="edu-dates">Aug 2024 – Dec 2025 · GPA 3.87 / 4.0</p>
+          <p>Focus on student access and success, program evaluation, and quantitative and qualitative methods. Quantitative training in Stata with Dr. Walter Ecton; research in Dr. Vilma Mesa’s RTMUS Lab through the Master’s Research Opportunity Program.</p>
+          <p class="edu-learned"><b>What it taught me</b>What systemic support feels like from the inside.</p>
+          <details class="edu-more">
+            <summary>Selected coursework</summary>
+            <ul>
+              <li>EDUC 793 · Introduction to Quantitative Methods in Educational Research</li>
+              <li>EDUC 795 · Quantitative Methods for Non-Experimental Research</li>
+              <li>Sociology in Higher Education</li>
+              <li>Finance, Management, &amp; Strategy in Higher Education</li>
+              <li>Academic Affairs in Higher Education</li>
+              <li>Power, Privilege, and the Politics of Difference in Higher Education</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="edu-card card" data-reveal style="--rd:90ms">
+          <p class="edu-coords">25.04° N · 121.51° E</p>
+          <p class="edu-place">Taipei · <span lang="zh-Hant" class="cjk">臺北市立大學</span></p>
+          <h3>University of Taipei</h3>
+          <p class="edu-school">Department of Education</p>
+          <p class="edu-degree">Exchange student</p>
+          <p class="edu-dates">2023 – 2024</p>
+          <p>Long conversations with faculty about Taiwan’s high admission rates: students under financial pressure trading study for paid work, and professors and students misreading each other’s expectations.</p>
+          <p class="edu-learned"><b>What it taught me</b>The same promise of a seat for everyone, kept by different means, can end in the same hierarchy.</p>
+        </article>
+
+        <article class="edu-card card" data-reveal style="--rd:180ms">
+          <p class="edu-coords">31.30° N · 120.62° E</p>
+          <p class="edu-place">Suzhou · <span lang="zh-Hans" class="cjk">苏州大学</span></p>
+          <h3>Soochow University</h3>
+          <p class="edu-school">Double major</p>
+          <p class="edu-degree">B.A., Management &amp; B.A., Education</p>
+          <p class="edu-dates">Sep 2020 – Jun 2024 · GPA 3.8 / 4.0</p>
+          <p>Management taught me to read institutions as organizations, from microeconomics and game theory to personnel and organization management. My first research project, a survey study with Dr. Xiao on how students’ subjective sense of family background shapes their engagement, introduced me to quantitative methods. Debate team captain and coach; peer mentor and advisor.</p>
+          <p class="edu-learned"><b>What it taught me</b>The rules behind the wall.</p>
+          <details class="edu-more">
+            <summary>Selected coursework</summary>
+            <ul>
+              <li>Principles of Management</li>
+              <li>Microeconomics · Macroeconomics</li>
+              <li>Game Theory of Management</li>
+              <li>Personnel &amp; Organization Management</li>
+              <li>Operations Research · Data Analysis</li>
+              <li>Principles of Finance · Accounting</li>
+              <li>Marketing Management · Project Management</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== EXPLORE ============================== -->
+  <section class="section section--tight" aria-label="Explore the site">
+    <div class="wrap explore-grid">
+      <a class="explore-card card" href="research.html" data-reveal>
+        <p class="explore-kicker">Research</p>
+        <h3>Working papers, talks, and reports</h3>
+        <p>Four manuscripts on class and college, presentations at AEFP, JMM, and RUME, and technical reports for NSF-funded and university audiences — each paired with its key figure.</p>
+        <p class="explore-meta">4 working papers · 3 presentations · 2 reports</p>
+        <span class="explore-go" aria-hidden="true">→</span>
+      </a>
+      <a class="explore-card card" href="experience.html" data-reveal style="--rd:90ms">
+        <p class="explore-kicker">Experience</p>
+        <h3>Research, programs, and teaching</h3>
+        <p>Research and evaluation roles at the University of Michigan, program coordination for the Digital Studies Institute, three years of peer advising, and teaching in Suzhou and rural Henan.</p>
+        <p class="explore-meta">7 positions · since 2021</p>
+        <span class="explore-go" aria-hidden="true">→</span>
+      </a>
+      <a class="explore-card card" href="writing.html" data-reveal style="--rd:180ms">
+        <p class="explore-kicker">Writing</p>
+        <h3>Inside and Outside the Door</h3>
+        <p>An essay on expansion, the rules behind the wall, and what a university owes the students it lets in — written in Chinese, with an English translation.</p>
+        <p class="explore-meta">Essay · October 2026</p>
+        <span class="explore-go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section class="band-navy contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div data-reveal>
+        <p class="eyebrow eyebrow-light">Contact</p>
+        <h2 id="contact-title">Let’s <em>talk.</em></h2>
+        <p class="contact-lede">I’m glad to hear from researchers, practitioners, and students working on college access, measurement, or comparative higher education.</p>
+      </div>
+      <div class="contact-card" data-reveal style="--rd:100ms">
+        <div class="contact-email-row">
+          <a class="contact-email" href="mailto:yeyzphe@gmail.com">yeyzphe@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="yeyzphe@gmail.com">Copy</button>
+        </div>
+        <ul class="contact-links">
+          <li><a href="https://www.linkedin.com/in/yangzhen-michael-ye" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          <li><a href="assets/docs/Yangzhen_Ye_CV.pdf" target="_blank" rel="noopener">Curriculum vitae (PDF) <span aria-hidden="true">↓</span></a></li>
+          <li><span>Ann Arbor, Michigan <em>Eastern Time</em></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Yangzhen (Michael) Ye · Last updated October 2026</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html">Experience</a>
+      <a href="writing.html">Writing</a>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </nav>
+  </div>
+</footer>
+
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
 </body>
 </html>
